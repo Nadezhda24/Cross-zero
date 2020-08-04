@@ -3,8 +3,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Крестики нолики</title>
   <link link rel="stylesheet" type="text/css" href="style.css" />
+  
  </head>
  <body>
+ 
 	<div id = "hat">
 	
 	</div>
@@ -18,15 +20,33 @@
 	
 	</div>
 	<div id = "game">
-	<input type="button"  id="bitton1" />
-	<input type="button"  id="bitton2" />
-	<input type="button"  id="bitton3" />
-	<input type="button"  id="bitton4" />
-	<input type="button"  id="bitton5" />
-	<input type="button"  id="bitton6" />
-	<input type="button"  id="bitton7" />
-	<input type="button"  id="bitton8" />
-	<input type="button"  id="bitton9" />
+	<input type="button"  id="bitton1" onclick="changeBackground1('bitton1');" />
+	<input type="button"  id="bitton2" onclick="changeBackground1('bitton2');"/>
+	<input type="button"  id="bitton3" onclick="changeBackground1('bitton3');" />
+	<input type="button"  id="bitton4" onclick="changeBackground1('bitton4');"/>
+	<input type="button"  id="bitton5" onclick="changeBackground1('bitton5');"/>
+	<input type="button"  id="bitton6" onclick="changeBackground1('bitton6');"/>
+	<input type="button"  id="bitton7" onclick="changeBackground1('bitton7');"/>
+	<input type="button"  id="bitton8" onclick="changeBackground1('bitton8');"/>
+	<input type="button"  id="bitton9" onclick="changeBackground1('bitton9');"/>
+	
 	</div>
+	
+	<script>
+var btn = new Array(document.getElementById('bitton1'), document.getElementById('bitton2'), document.getElementById('bitton3'),
+ document.getElementById('bitton4'), document.getElementById('bitton5'), document.getElementById('bitton6'), 
+ document.getElementById('bitton7'), document.getElementById('bitton8'), document.getElementById('bitton9'))
+function changeBackground1(id){
+	document.getElementById(id).style.cssText = 'background-image: url(img/cross.png); background-size:100% 100%';
+	var i = Math.floor(Math.random() * 9 + 0)
+	if(btn[i].style.cssText != 'background-image: url(img/cross.png); background-size:100% 100%'){
+	btn[i].style.cssText = 'background-image: url(img/zero.png); background-size:100% 100%';}
+	for (let i=0; i< 9; i++){
+			
+	}
+}
+
+
+</script>
  </body>
 </html>
